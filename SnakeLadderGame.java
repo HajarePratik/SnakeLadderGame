@@ -12,9 +12,7 @@ public class SnakeLadderGame
 		int newposition=0;
 		int winposition=100;
 		
-		
-		
-		while (startposition<=winposition) 
+		while (startposition<winposition) 
 		{
 			int DieRoll = (int) (Math.random()*6)+1;
 			int CheckOption = (int) (Math.random()*3);
@@ -36,6 +34,10 @@ public class SnakeLadderGame
 			if (startposition<0)
 			{
 				startposition = 0;
+			}
+			if (startposition>100) 
+			{
+				startposition=newposition;
 			}
 			System.out.println("Your are Now at "+startposition+"th"+" Position");
 			
